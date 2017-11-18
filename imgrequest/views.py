@@ -1,4 +1,5 @@
-from django.shortcuts import render
+import subprocess
+from django.http import JsonResponse
 
 
 def handle_file(file):
@@ -7,8 +8,17 @@ def handle_file(file):
             destination.write(chunk)
 
 
-def get_img(request):
+def check_exit():
+    result = subprocess.run(['ls', '-l'], stdout=subprocess.PIPE)
+    resultstr = result.stdout.decode('utf-8')
+    if "exit" in resultstr:
+        return True
+    else:
+        return False
+
+
+def process_img(request):
     if request.method == 'POST':
         handle_file(request.FILES['file'])
-
-
+    result = check_exit()
+    return JsonResponse({'lickmyterryfolds': str(result)})
