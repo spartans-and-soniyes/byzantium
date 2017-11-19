@@ -1,0 +1,10 @@
+{
+  "name": "insert dank meme here",
+  "description": "This app does one little thing, and does it well.",
+  "image": "heroku/python",
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
