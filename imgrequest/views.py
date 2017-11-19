@@ -22,7 +22,7 @@ def process_img(request):
     if request.method == 'POST':
         handle_file(request.FILES['file'])
     result = check_exit()
-    return JsonResponse({'lickmyterryfolds': str(result)})
+    return JsonResponse({'ServerResponseData': str(result)})
 
 
 def index(request):
