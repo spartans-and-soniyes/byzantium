@@ -21,5 +21,7 @@ from imgrequest import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    url(r'^process/', views.process_img)
+    url(r'^process/', views.process_img),
+
+    url(r'^$', views.index)
 ]

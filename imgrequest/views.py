@@ -23,3 +23,7 @@ def process_img(request):
         handle_file(request.FILES['file'])
     result = check_exit()
     return JsonResponse({'lickmyterryfolds': str(result)})
+
+
+def index():
+    return JsonResponse({'HelloWorld': 'HeyThere'})
