@@ -9,8 +9,8 @@ def handle_file(file):
 
 
 def check_exit():
-    result = subprocess.run(['~/darknet/darknet detector test cfg/coco.data cfg/yolo.cfg yolo.weights data/dog.jpg'],
-                            stdout=subprocess.PIPE)
+    result = subprocess.run(['~/darknet/darknet detector test cfg/coco.data cfg/yolo.cfg yolo.weights '
+                             './images/exit.jpg'], stdout=subprocess.PIPE)
     resultstr = result.stdout.decode('utf-8')
     if "exit" in resultstr:
         return True
