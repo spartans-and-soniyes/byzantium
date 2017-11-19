@@ -25,5 +25,5 @@ def process_img(request):
     return JsonResponse({'lickmyterryfolds': str(result)})
 
 
-def index():
+def index(request):
     return JsonResponse({'HelloWorld': 'HeyThere'})
