@@ -1,6 +1,6 @@
 certifi==2017.4.17
 chardet==3.0.4
-Django==1.11.7
+Django==2.2.24
 gunicorn==19.4.5
 flake8==3.5.0
 idna==2.6
